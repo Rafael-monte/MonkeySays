@@ -1,6 +1,7 @@
 #include "MonkeyTyper.h"
 
 void MonkeyTyper::Write(const int& MAXIMUM_WORDS_IN_SENTENCE) {
+	srand(time(nullptr));
 	std::cout << "O mamaco diz: " << std::endl;
 	for (int i = 0; i < MAXIMUM_NUMBER_OF_SENTENCES; i++) {
 		for (int j = 0; j < MAXIMUM_WORDS_IN_SENTENCE; j++) {

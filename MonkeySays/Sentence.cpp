@@ -7,7 +7,6 @@ void Sentence::AddWord(const std::string& word) {
 
 std::string Sentence::GetCompleteSentence() {
 	const std::string WHITESPACE{ " " };
-	const std::string END_OF_SENTENCE{ "." };
 	std::string sentence{};
 	for (const auto& word : this->words) {
 		sentence.append(word);

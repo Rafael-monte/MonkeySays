@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Chronometer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MonkeyTyper.cpp" />
     <ClCompile Include="Sentence.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Chronometer.h" />
     <ClInclude Include="Sentence.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="MonkeyTyper.h" />

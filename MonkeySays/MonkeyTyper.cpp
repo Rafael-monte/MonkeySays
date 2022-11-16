@@ -29,6 +29,7 @@ void MonkeyTyper::TypeWord() {
 		numberOfCharacters++;
 	}
 	Sentence sentence{};
+	word.append(WHITESPACE);
 	sentence.AddWord(word);
 	this->Sentences.push_back(sentence);
 }

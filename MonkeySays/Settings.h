@@ -8,5 +8,5 @@ const int MAXIMUM_NUMBERS_OF_WORDS_IN_SENTENCE{ 7 };
 //Número máximo de sentenças que podem ser feito pelo mamaco
 const int MAXIMUM_NUMBER_OF_SENTENCES{ 100 };
 // Tempo de espera para mostrar uma nova palavra, em milisegundos
-const int TIME_BETWEEN_WORDS_IN_MILLISECONDS{ 2000 };
+const int TIME_BETWEEN_WORDS_IN_MILLISECONDS{ 1000 };
 

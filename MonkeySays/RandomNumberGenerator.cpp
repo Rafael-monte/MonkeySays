@@ -8,7 +8,7 @@ int RandomNumberGenerator::GenerateRandomNumber(const int& MAX_RANGE, const int&
 	try {
 		return this->GetRandomNumberUsingUniformDistribution(MAX_RANGE, MIN_RANGE);
 	}
-	catch (std::exception& e) {
+	catch (const std::exception& e) {
 		return this->GetRandomNumberUsingDefaultMethod(MAX_RANGE, MIN_RANGE);
 	}
 }

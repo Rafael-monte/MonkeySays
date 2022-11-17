@@ -19,7 +19,5 @@ private:
 	void ShowFinalConsiderations();
 public:
 	void Write(const int& MAXIMUM_WORDS_IN_SENTENCE=MAXIMUM_NUMBERS_OF_WORDS_IN_SENTENCE);
-
-	
 };
 

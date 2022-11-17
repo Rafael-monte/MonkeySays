@@ -1,4 +1,7 @@
 #pragma once
+
+/* CONFIGURAÇÕES DO PROJETO */
+
 // Número mínimo de caracteres em uma palavra
 const int MINIMUM_CHARACTERS_IN_WORD{ 2 };
 // Numero máximo de caracteres em uma palavra, caso demore ou não venha o espaço

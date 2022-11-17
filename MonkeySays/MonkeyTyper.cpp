@@ -1,7 +1,6 @@
 #include "MonkeyTyper.h"
 
 void MonkeyTyper::Write(const int& MAXIMUM_WORDS_IN_SENTENCE) {
-
 	std::cout << "O mamaco diz: " << std::endl;
 	this->Chronometer.Start();
 	for (int i = 0; i < MAXIMUM_NUMBER_OF_SENTENCES; i++) {
@@ -13,7 +12,6 @@ void MonkeyTyper::Write(const int& MAXIMUM_WORDS_IN_SENTENCE) {
 	this->Chronometer.Stop();
 	this->ShowFinalConsiderations();
 }
-
 
 void MonkeyTyper::TypeWord() {
 	const std::string WHITESPACE{ " " };
@@ -43,7 +41,6 @@ std::string MonkeyTyper::TypeRandomChar() {
 	std::string randomCharInAlphabet{ this->ALPHABET.at(randomLetterPosition) }; //Pegando uma letra aleatória do alfabeto
 	return randomCharInAlphabet;
 }
-
 
 void MonkeyTyper::ShowFinalConsiderations() {
 	if (SHOW_EXECUTION_TIME_AT_THE_END_OF_PROGRAM) {

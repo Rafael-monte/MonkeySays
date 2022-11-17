@@ -11,4 +11,6 @@ const int MAXIMUM_NUMBER_OF_SENTENCES{ 10 };
 const int TIME_BETWEEN_WORDS_IN_MILLISECONDS{ 1000 };
 // Mostrar tempo de execução ao final do programa
 const bool SHOW_EXECUTION_TIME_AT_THE_END_OF_PROGRAM{ true };
+// Mostrar Método de Geração utilizado pelo macaco
+const bool SHOW_USED_GENERATION_METHOD{ true };
 

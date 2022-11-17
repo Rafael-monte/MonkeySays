@@ -1,14 +1,17 @@
 #include "MonkeyTyper.h"
 
 void MonkeyTyper::Write(const int& MAXIMUM_WORDS_IN_SENTENCE) {
-	srand(time(nullptr));
+
 	std::cout << "O mamaco diz: " << std::endl;
+	this->Chronometer.Start();
 	for (int i = 0; i < MAXIMUM_NUMBER_OF_SENTENCES; i++) {
 		for (int j = 0; j < MAXIMUM_WORDS_IN_SENTENCE; j++) {
 			this->TypeWord();
 		}
 		this->Sentences.at(i).GetCompleteSentence();
 	}
+	this->Chronometer.Stop();
+	this->ShowFinalConsiderations();
 }
 
 
@@ -36,15 +39,20 @@ void MonkeyTyper::TypeWord() {
 }
 
 std::string MonkeyTyper::TypeRandomChar() {
-	auto randomLetterPosition{ this->GetRandomNumberInRange(this->ALPHABET.size() - 1) };
+	auto randomLetterPosition{ this->RandomNumberGenerator.GenerateRandomNumber(this->ALPHABET.size() - 1) };
 	std::string randomCharInAlphabet{ this->ALPHABET.at(randomLetterPosition) }; //Pegando uma letra aleatória do alfabeto
-
 	return randomCharInAlphabet;
 }
 
 
-int MonkeyTyper::GetRandomNumberInRange(const int& MAX_RANGE, const int& MIN_RANGE) {
-	return MIN_RANGE + (std::rand() % (MAX_RANGE - MIN_RANGE + 1));
+void MonkeyTyper::ShowFinalConsiderations() {
+	if (SHOW_EXECUTION_TIME_AT_THE_END_OF_PROGRAM) {
+		this->Chronometer.ShowElapsedTime();
+	}
+
+	if (SHOW_USED_GENERATION_METHOD) {
+		this->RandomNumberGenerator.ShowMethodUsedInGeneration();
+	}
 }
 
 

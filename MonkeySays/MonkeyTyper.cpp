@@ -37,7 +37,8 @@ void MonkeyTyper::TypeWord() {
 }
 
 std::string MonkeyTyper::TypeRandomChar() {
-	auto randomLetterPosition{ this->RandomNumberGenerator.GenerateRandomNumber(this->ALPHABET.size() - 1) };
+	const auto ALPHABET_SIZE{ static_cast<int>(this->ALPHABET.size() - 1) };
+	auto randomLetterPosition{ this->RandomNumberGenerator.GenerateRandomNumber(ALPHABET_SIZE) };
 	std::string randomCharInAlphabet{ this->ALPHABET.at(randomLetterPosition) }; //Pegando uma letra aleatória do alfabeto
 	return randomCharInAlphabet;
 }

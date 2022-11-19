@@ -2,13 +2,14 @@
 
 int RandomNumberGenerator::GenerateRandomNumber(const int& MAX_RANGE, const int& MIN_RANGE) {
 	if (!this->SeedSet) {
-		srand(time(nullptr));
+		auto srandSeed{ static_cast<unsigned int>(time(nullptr)) };
+		srand(srandSeed);
 		this->SeedSet = true;
 	}
 	try {
 		return this->GetRandomNumberUsingUniformDistribution(MAX_RANGE, MIN_RANGE);
 	}
-	catch (const std::exception& e) {
+	catch (const std::exception) {
 		return this->GetRandomNumberUsingDefaultMethod(MAX_RANGE, MIN_RANGE);
 	}
 }
